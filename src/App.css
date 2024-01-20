@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap");
+
+:root {
+  --Purple: hsl(259, 100%, 65%);
+  --Lightred: hsl(0, 100%, 67%);
+  --White: hsl(0, 0%, 100%);
+  --Offwhite: hsl(0, 0%, 94%);
+  --Lightgrey: hsl(0, 0%, 86%);
+  --Somkeygray: hsl(0, 1%, 44%);
+  --Offblack: hsl(0, 0%, 8%);
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: var(--Lightgrey);
+  padding: 1rem;
+  display: grid;
+  place-content: center;
+  font-size: 1.6rem;
+  font-family: "Manrope", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+.Form-container {
+  background-color: var(--White);
+  padding: 4rem 5rem;
+  border-radius: 20px;
+  font-size: 1.4rem;
+}
+form label {
+  letter-spacing: 0.3rem;
+  color: var(--Somkeygray);
+  font-weight: 900;
+  font-size: 0.9em;
+  display: block;
+  margin: 0.9em auto;
+}
+
+form input {
+  width: 100%;
+  caret-color: var(--Offblack);
+  font-size: 2em;
+  border-radius: 1rem;
+  padding: 1.2rem;
+  font-weight: bold;
+  border: 1px solid var(--Lightgrey);
+}
+
+form h4 {
+  margin: 1rem;
+  color: var(--Lightred);
+  font-weight: 400;
+  font: italic;
+}
+form input:focus-visible {
+  outline-color: var(--Purple);
+}
+.submit-button {
+  border: 0.1rem solid var(--Lightgrey);
+  width: 100%;
+  position: relative;
+  margin: 7rem auto;
+  font-size: 2rem;
+}
+.submit-button input {
+  position: absolute;
+  right: 50%;
+  left: 50%;
+  width: 2em;
+  transform: translate(-50%, -50%);
+  background-color: var(--Purple);
+  clip-path: circle();
+  padding: 2rem;
+}
+
+input:hover {
+  cursor: pointer;
+}
+.submit-button input:hover {
+  background-color: var(--Offblack);
+}
+.display-age-container {
+  width: 100%;
+  font-size: clamp(3rem, 4vw, 4rem);
+  text-align: center;
+  line-height: 4rem;
+}
+.display-age-container h1 {
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  font-weight: 1000;
+}
+
+h1 span {
+  color: var(--Purple);
+  margin: 0.3em;
+  display: block;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+  .Form-container {
+    max-width: 70rem;
+    padding: 3rem 10rem 3rem 6rem;
+    border-bottom-right-radius: 20rem;
+  }
+  .d-m-y-container {
+    display: flex;
+    width: 80%;
+    gap: 2rem;
+  }
+
+  .submit-button {
+    font-size: 2.2rem;
+    margin: 2em auto;
+  }
+
+  input[type="image"] {
+    left: 100%;
+  }
+
+  .display-age-container {
+    text-align: initial;
+  }
+  .display-age-container span {
+    display: inline-block;
+    margin: auto;
+  }
+}
